@@ -473,6 +473,8 @@ export class AuthService {
     const headers = new Headers();
     headers.append('Accept', 'application/json');
     headers.append('Content-type', 'application/json');
+    headers.append('Access-Control-Allow-Origin', '*');
+    headers.append('Access-Contorl-Allow-Headers', 'Origin, X-Requested-Width, Content-Type, Accept');
     const options = new RequestOptions({ headers });
     const body = { 'email': email, 'password': password };
     console.log('SIGNIN POST REQUEST BODY ', body);
